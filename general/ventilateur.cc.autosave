@@ -1,0 +1,8 @@
+#include <iostream>
+#include "ventilateur.h"
+
+
+void Ventilateur::ajoute_a(Systeme& S) const {
+    V.ajoute_a(S);
+    B.ajoute_a(S);
+}

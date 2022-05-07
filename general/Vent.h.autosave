@@ -1,0 +1,21 @@
+#pragma once
+#include "ChampForce.h"
+
+
+class Vent: public Champforce{
+	
+private:
+	Vecteur origine;
+	Vecteur normale;
+    Vecteur largeur;
+    Vecteur longueur;
+    Vecteur profondeur;
+	
+public:
+    Vent(Vecteur o, Vecteur n, Vecteur l, Vecteur L, Vecteur p, Vecteur i)
+        : ChampForce(i), origine(o), normale(n), largeur(l), longueur(L), profondeur(p)
+        {}
+    
+    bool dans_champ(ObjetMobile const& M) const;
+    void agit_sur(ObjetMobile&) const;
+};
